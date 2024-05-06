@@ -1,0 +1,40 @@
+
+
+<app-side-nav></app-side-nav>  
+
+<div class="container">
+  <img src="../assets/images/girl.jpeg" alt="">
+  <form (ngSubmit)="updateProfile()">
+
+
+    <div class="group">
+      <label for="username">Username:</label>
+    <input *ngIf="!editingUsername" type="text" [(ngModel)]="username" name="username" id="username" placeholder="New Username" disabled id="username">
+
+    <input *ngIf="editingUsername" type="text" [(ngModel)]="username" name="username" id="username" placeholder="New Username" id="username">
+  
+    <mat-icon (click)="toggleEdit('username')">edit</mat-icon>
+    </div>
+
+   <div class="group">
+    <label for="email">Email:</label>
+    <input *ngIf="!editingEmail" type="email" [(ngModel)]="email" name="email" id="email" placeholder="New Email" disabled id="email">
+
+    <input *ngIf="editingEmail" type="email" [(ngModel)]="email" name="email" id="email" placeholder="New Email" id="email">
+  
+    <mat-icon (click)="toggleEdit('email')" class="icon">edit</mat-icon>
+
+   </div>
+    <div class="group"><label for="newPassword">Password:</label>
+      <input *ngIf="!editingNewPassword" type="password" [(ngModel)]="newPassword" name="newPassword" id="newPassword" placeholder="New Password" disabled id="password">
+  
+      <input *ngIf="editingNewPassword" type="password" [(ngModel)]="newPassword" name="newPassword" id="newPassword" placeholder="New Password" id="password">
+     
+      <mat-icon (click)="toggleEdit('newPassword')">edit</mat-icon></div>
+
+  <div class="button">
+    <button type="submit">Update Profile</button>
+  </div>
+  </form>
+</div>
+

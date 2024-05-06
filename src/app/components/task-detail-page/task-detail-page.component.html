@@ -1,0 +1,24 @@
+<app-side-nav></app-side-nav>
+<div class="main">
+  <div *ngIf="task" class="card">
+    <p id="id">ID: {{ task.id }}</p>
+    <p id="title"> {{ task.title }}</p>   
+    <p> {{ task.description }}</p>
+    <p>Due Date: {{ task.dueDate }}</p>
+    <p>Priority: {{ task.priority }}</p>
+      <button [ngClass]="{
+        'completed': task.status === 'completed',
+        'pending': task.status === 'pending',
+        'overdue': task.status === 'overdue'
+      }"
+      (click)="toggleTaskStatus(task)" [disabled]="task.status === 'completed'" class="hover-button">
+        {{ getStatusText(task.status) }}
+      </button>
+      <div class="tooltip">Click on the button to mark it as complete if you done it</div>
+   
+    
+
+    <button (click)="Delete(task.id)" id="button">Delete Task</button>
+    <button (click)="Update(task.id)" id="button">Update</button>
+  </div>
+</div>

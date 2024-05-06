@@ -1,0 +1,103 @@
+
+
+
+
+
+<app-side-nav></app-side-nav>
+<div class="main-container">
+  <div class="task">
+   <div class="total">
+    <img src="../assets/images/task.png" alt="">
+   <div class="content">
+    <p id="t">Total Tasks:</p> 
+    <p id="p"> {{ totalTasks }}</p>
+   </div>
+   </div>
+   <div class="total">
+    <img src="../assets/images/pending.jpeg" alt="">
+   <div class="content">
+    <p id="t">Pending Tasks:</p> 
+    <p id="p" style="color: orange;"> {{ pendingTasks }}</p>
+   </div>
+   </div>
+   <div class="total">
+    <img src="../assets/images/overdue.png" alt="">
+   <div class="content">
+    <p id="t">Overdue Tasks:</p> 
+    <p id="p" style="color: red;"> {{ overdueTasks }}</p>
+   </div>
+   </div>
+   <div class="total">
+    <img src="../assets/images/completed.png" alt="">
+   <div class="content">
+    <p id="t">Completed Tasks:</p> 
+    <p id="p" style="color: green;"> {{ completedTasks }}</p>
+   </div>
+   </div>
+  </div>
+  <div class="dashboard-container">
+    <div class="piechart">
+      <h1>Task Priority Statistics</h1>
+      <canvas id="pieChart"></canvas>
+     
+    </div>
+  
+    <div class="container">
+        <div class="topp">
+          
+            <div class="filter">
+              <label id="filter">Filter by Status:</label>
+              <select [(ngModel)]="statusFilter" (change)="applyFilter()" name="statusFilter" >
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                <option value="overdue">Overdue</option>
+              </select>
+              <img src="../assets/images/icons8-sort-30.png" alt="" (click)="sortTitle()" class="sort" >
+              <button (click)="navigateToTaskCreationPage()" class="add">Add Your Tasks</button>
+            
+            
+            </div>
+        
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col" id="title">TITLE
+                </th>
+                <th scope="col">DUE-DATE</th>
+                <th scope="col">STATUS</th>
+                <th scope="col" colspan="2" id="action">ACTIONS</th>
+                
+    
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of taskdata.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage); trackBy:trackById">
+              <tr>
+                <td>{{item.id}}</td>
+                <th scope="row" id="title">{{item.title}}</th>   
+                <td>{{item.dueDate}}</td>
+              <td> <button [ngClass]="{
+                'completed': item.status === 'completed',
+                'pending': item.status === 'pending',
+                'overdue': item.status === 'overdue'
+              }"
+              (click)="toggleTaskStatus(item)" [disabled]="item.status === 'completed'">
+        {{ getStatusText(item.status) }}
+      </button></td>
+            <td> <div  (click)="Delete(item.id)">
+              <mat-icon class="blue">delete</mat-icon>
+          </div></td>
+             <td>  <div  (click)="view(item.id)">
+              <mat-icon class="blue">visibility</mat-icon>
+          </div></td>
+              </tr>   
+            </tbody>
+          
+           
+          </table>
+          <pagination-controls (pageChange)="pageChanged($event)" [id]="'mypagination'"></pagination-controls>     
+       
+      </div>
+  </div>
+</div>

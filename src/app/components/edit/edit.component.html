@@ -1,0 +1,38 @@
+
+<app-side-nav></app-side-nav>
+<div class="container">
+  <h2>Edit Task</h2>
+  <form *ngIf="taskForm" [formGroup]="taskForm" (ngSubmit)="updateTask()">
+    <div>
+      <label>Title:</label>
+      <input type="text" formControlName="title" required>
+    </div>
+    <div>
+      <label>Description:</label>
+      <textarea formControlName="description"></textarea>
+    </div>
+    <div>
+      <label>Due Date:</label>
+      <input type="date" formControlName="dueDate" required min="{{ currentDate | date: 'yyyy-MM-dd' }}">
+    </div>
+    <div>
+      <label>Priority:</label>
+      <select formControlName="priority" required>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+    <div>
+      <label>Status:</label>
+      <select formControlName="status" required>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+        <option value="overdue">Overdue</option>
+      </select>
+    </div>
+    <div>
+      <button type="submit" >Update Task</button>
+    </div>
+  </form>
+</div>

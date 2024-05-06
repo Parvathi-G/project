@@ -1,0 +1,130 @@
+{
+  "usersdata": [
+    {
+      "id": "d911",
+      "username": "Sandra",
+      "email": "sandra@gmail.com",
+      "password": "741852963"
+    },
+    {
+      "id": "b0c8",
+      "username": "Dany",
+      "email": "dany@gmail.com",
+      "password": "1234567890"
+    },
+    {
+      "id": "79fa",
+      "username": "Sachin",
+      "email": "sachin@gmail.com",
+      "password": "741852963"
+    },
+    {
+      "id": "b789",
+      "username": "Sanoop",
+      "email": "sanoop@gmail.com",
+      "password": "789456123"
+    },
+    {
+      "id": "5ae8",
+      "username": "Sourav",
+      "email": "sourav@gmail.com",
+      "password": "789456123"
+    },
+    {
+      "id": "a1b1",
+      "username": "Sona",
+      "email": "sona@gmail.com",
+      "password": "987654321"
+    },
+    {
+      "id": "08d3",
+      "username": "Sandeep",
+      "email": "sandeep@gmail.com",
+      "password": "741852963"
+    },
+    {
+      "username": "Kalyani Nair",
+      "email": "Kalyani@gmail.com",
+      "password": "1234567890",
+      "id": "119b"
+    },
+    {
+      "id": "3b46",
+      "username": "Lakshmi",
+      "email": "lakshmi@gmail.com",
+      "password": "lashmi@1011"
+    },
+    {
+      "username": "Sandra Joys",
+      "email": "sandra@gmail.com",
+      "password": "sandra@1011",
+      "id": "ff95"
+    }
+  ],
+  "Task": [
+    {
+      "title": "Bug fixing",
+      "description": "Identify and resolve software bugs reported by users or detected during testing.",
+      "dueDate": "2024-05-21",
+      "priority": "high",
+      "status": "completed",
+      "id": "e321"
+    },
+    {
+      "title": "Complete project proposal",
+      "description": "Write a detailed proposal outlining project objectives, deliverables, and timeline.",
+      "dueDate": "2024-05-31",
+      "priority": "high",
+      "status": "overdue",
+      "id": "1ddc"
+    },
+    {
+      "title": "Perform system maintenance",
+      "description": "Perform routine maintenance tasks such as database backups, server updates, and security patches.",
+      "dueDate": "2024-05-26",
+      "priority": "low",
+      "status": "pending",
+      "id": "744d"
+    },
+    {
+      "id": "6192",
+      "title": "Conduct team training",
+      "description": "Organize and conduct training sessions to educate team members on new technologies or processes.",
+      "dueDate": "2024-05-22",
+      "priority": "high",
+      "status": "completed"
+    },
+    {
+      "title": "Organize a Game Night",
+      "description": "Unleash your inner party planner! Choose a fun game, invite friends, prepare snacks and drinks, and set the stage for a night of laughter and friendly competition.",
+      "dueDate": "2024-05-21",
+      "priority": "high",
+      "status": "completed",
+      "id": "efa0"
+    },
+    {
+      "id": "7a6f",
+      "title": "Research a Weekend Getaway",
+      "description": "Escape the ordinary! Explore online resources and travel guides to discover a hidden gem or revisit a favorite destination, planning the perfect itinerary for a refreshing escape.",
+      "dueDate": "2024-05-22",
+      "priority": "medium",
+      "status": "overdue"
+    },
+    {
+      "id": "e58c",
+      "title": "Plan a Themed Potluck Dish",
+      "description": "Unleash your creativity! Brainstorm a unique and delicious dish that fits a chosen theme, like \"Around the World\" or \"Decades of Food.\"",
+      "dueDate": "2024-05-21",
+      "priority": "medium",
+      "status": "completed"
+    },
+    {
+      "id": "4fa5",
+      "title": "Organize a Game Night",
+      "description": "Unleash your inner party planner! Choose a fun game, invite friends, prepare snacks and drinks, and set the stage for a night of laughter and friendly competition.",
+      "dueDate": "2024-05-06",
+      "priority": "medium",
+      "status": "completed"
+    }
+  ]
+}

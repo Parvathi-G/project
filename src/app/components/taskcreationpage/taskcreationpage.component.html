@@ -1,0 +1,55 @@
+
+  <app-side-nav></app-side-nav>
+  <div class="container">
+    <h2>Create Your Daily Task</h2>
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label class="title">Title<span>*</span></label>
+        <input type="text" formControlName="title"  required>
+        <div *ngIf="taskForm.get('title')?.invalid && taskForm.get('title')?.touched" class="invalid">
+          Please enter a title.
+        </div>
+      </div>
+      <div>
+        <label class="description">Description<span>*</span></label>
+      <textarea formControlName="description" ></textarea>
+      <div *ngIf="taskForm.get('description')?.invalid && taskForm.get('description')?.touched"  class="invalid">
+        Please enter a description.
+      </div>
+      </div>
+     
+      <div>
+        <label class="date">Due Date<span>*</span></label>
+        <input type="date" formControlName="dueDate" required  min="{{ currentDate | date: 'yyyy-MM-dd' }}">
+        <div *ngIf="taskForm.get('dueDate')?.invalid && taskForm.get('dueDate')?.touched"  class="invalid">
+          Please enter a due date.
+        </div>
+      </div>
+      <div>
+        <label class="priority">Priority<span>*</span></label>
+        <select formControlName="priority" required >
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <div *ngIf="taskForm.get('priority')?.invalid && taskForm.get('priority')?.touched"  class="invalid">
+          Please select a priority.
+        </div>
+      </div>
+      <div>
+        <label class="status">Status<span>*</span></label>
+        <select formControlName="status" required >
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+          <option value="overdue">Overdue</option>
+        </select>
+        <div *ngIf="taskForm.get('status')?.invalid && taskForm.get('status')?.touched"  class="invalid">
+          Please select a status.
+        </div>
+      </div>
+      <div>
+        <button type="submit">Create Task</button>
+      </div>
+    </form>
+  </div>
+  

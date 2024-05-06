@@ -1,0 +1,80 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: rgb(202, 224, 202);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  color: black;
+}
+#id{
+  text-align: left;
+}
+#title{
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+  color: darkblue;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card button {
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+.completed {
+  background-color: #a78ee7;
+  color: darkblue;
+  width: 300px;
+  text-align: center;
+  }
+  
+  .pending {
+    background-color: #a78ee7;
+    color: darkblue;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .overdue {
+    background-color: #a78ee7;
+    color: darkblue;
+    width: 300px;
+    text-align: center;
+  }
+  button{
+    border: 1px solid darkblue;
+  }
+  #button{
+    background-color: #a78ee7;
+    width: 300px;
+    color: darkblue;
+    text-align: center;
+  }
+  .tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hover-button:hover + .tooltip {
+    display: block;
+  }
+  
